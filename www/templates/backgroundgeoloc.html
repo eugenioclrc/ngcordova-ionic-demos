@@ -1,0 +1,24 @@
+<ion-view title="Demo for Background Geolocation">
+  	<ion-content>
+  		<div class="card">
+  			<div class="item item-divider">
+            $cordovaBackgroundGeolocation <span class="badge badge-assertive">Not working</span>
+        </div>        
+        <div class="item item-text-wrap">
+  				<p>Cross-platform background geolocation for Cordova / PhoneGap with battery-saving "circular region monitoring" and "stop detection".</p>
+  			</div>
+  		</div>
+      <a class="button button-stable button-block" ng-disabled="running" ng-click="startBackgroundGeolocation()">
+        Start()
+      </a>
+      <a class="button button-stable button-block" ng-disabled="!running" ng-click="stopBackgroundGeolocation()">
+        Stop()
+      </a>
+      <div class="padding">
+        <h4>Location details</h4>
+        <pre>
+          {{locationDetails | json}}
+        </pre>
+      </div>
+  	</ion-content>
+</ion-view>
