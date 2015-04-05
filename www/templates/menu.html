@@ -14,13 +14,13 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
+    <ion-header-bar class="bar-dark">
       <h1 class="title">Menu Examples</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
         <ion-item nav-clear menu-close class="item" 
-          ng-repeat="item in items" ng-class="{'active': activeTab.name == item.state}"
+          ng-repeat="item in items" ng-class="{'active': activeTab.name == item.state, 'assertive': item.notworking}"
           ui-sref="{{item.state}}">{{item.anchor}}
         </ion-item>
         
