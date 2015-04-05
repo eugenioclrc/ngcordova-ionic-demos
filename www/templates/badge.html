@@ -1,0 +1,73 @@
+<ion-view title="Demo for App Version">
+  	<ion-content>
+  		<div class="card">
+  			<div class="item item-divider">
+            $cordovaBadge
+        </div>        
+        <div class="item item-text-wrap">
+  				<p>Access and modify the badge number of the app icon on various mobile platforms including iOS, Android and Windows Phone.</p>
+  			</div>
+  		</div>
+
+      <div class="padding">
+        <h4>Badge permissions</h4>
+        <p>
+          {{badgePerms}}<br />
+          <a class="button button-stable" ng-click="promptForPermission()">promptForPermission()</a>
+        </p>
+      </div>
+      <div class="list">
+        <div class="item item-divider">
+            Config
+        </div>        
+        
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Icon
+          </div>
+          <select ng-model="conf.iconSmall" ng-options="icon for icon in icons">
+          </select>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Title</span>
+          <input type="text" ng-model="conf.title" style="text-align:right">
+        </label>
+        <div class="item item-toggle">
+            Autoclear
+            <label class="toggle toggle-positive">
+                <input type="checkbox" ng-model="conf.autoClear">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+            </label>
+        </div>
+        
+        <div class="item item-divider">
+          Play
+        </div>  
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Number of badges
+          </div>
+          <select ng-model="n" ng-init="n=1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </label>      
+        <a class="item" ng-click="setBadges(n)">
+          Show badges
+        </a>
+        <a class="item" ng-click="getBadges()">
+          Get badges <span class="badge badge-assertive" ng-show="badges!=''">{{badges}}</span>
+        </a>
+        <a class="item" ng-click="clearBadges()">
+          Clear badges
+        </a>
+      </div>
+
+
+  	</ion-content>
+</ion-view>
