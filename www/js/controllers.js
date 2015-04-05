@@ -175,8 +175,8 @@ angular.module('ngcordobademo')
 	// icons: http://www.darshancomputing.com/android/1.5-drawables.html
 
 	$scope.conf = {
-		iconSmall: 'ic_dialog_email',
-		title: 'Badge demo',
+		smallIcon: 'ic_dialog_email',
+		title: 'Badge demo %d messages',
 		autoClear: false
 	};
 	$scope.badges = '';
