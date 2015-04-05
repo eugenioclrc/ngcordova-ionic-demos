@@ -21,7 +21,9 @@
       <ion-list>
         <ion-item nav-clear menu-close class="item" 
           ng-repeat="item in items" ng-class="{'active': activeTab.name == item.state, 'assertive': item.notworking}"
-          ui-sref="{{item.state}}">{{item.anchor}}
+          ui-sref="{{item.state}}">
+            <span style="{{item.notready? 'text-decoration: line-through;':''}}">{{item.anchor}}</span>
+            <span ng-show="item.notready">TODO</span>
         </ion-item>
         
       </ion-list>
