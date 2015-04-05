@@ -1,0 +1,107 @@
+<ion-view title="Demo for AdMob Plugin">
+  	<ion-content>
+  		<div class="card">
+	  		<div class="item item-divider">
+	          $cordovaAdMob
+	        </div>
+  			<div class="item item-text-wrap">
+  				<p>The <a href="https://github.com/floatinghotpot/cordova-admob-pro">AdMob</a> plugin presents AdMob Ads in Mobile App/Games natively from JavaScript.</p>
+  			</div>
+  		</div>
+  		<form>
+			<div class="list">
+				<div class="item item-divider">
+            		Banner
+          		</div>
+				<label class="item item-input item-select">
+    				<div class="input-label">
+      					Type
+    				</div>
+    				<select ng-model="banner.size">
+      					<option value="SMART_BANNER">SMART_BANNER</option>
+						<option value="BANNER">BANNER</option>
+						<option value="MEDIUM_RECTANGLE">MEDIUM_RECTANGLE</option>
+						<option value="FULL_BANNER">FULL_BANNER</option>
+						<option value="LEADERBOARD">LEADERBOARD</option>
+						<option value="SKYSCRAPER">SKYSCRAPER</option>
+    				</select>
+  				</label>
+
+				<label class="item item-input item-select">
+    				<div class="input-label">
+      					Position
+    				</div>
+    				<select ng-model="banner.position">
+						<option value="1">Top Left</option>
+						<option value="2">Top Center</option>
+						<option value="3">Top Right</option>
+						<option value="4">Left</option>
+						<option value="5">Center</option>
+						<option value="6">Right</option>
+						<option value="7">Bottom Left</option>
+						<option value="8">Bottom Center</option>
+						<option value="9">Bottom Right</option>
+    				</select>
+  				</label>
+
+
+
+
+				<div class="item item-toggle">
+			    	Overlap
+     				<label class="toggle toggle-positive">
+				    	<input type="checkbox" ng-model="banner.overlap" />
+			    		<div class="track">
+			    			<div class="handle"></div>
+			    		</div>
+     				</label>
+  				</div>
+
+				<div class="item item-toggle">
+     				OffsetTopBar
+     				<label class="toggle toggle-positive">
+        				<input type="checkbox" ng-model="banner.offsetTopBar">
+       					<div class="track">
+         					<div class="handle"></div>
+       					</div>
+     				</label>
+  				</div>
+  			</div>
+  			<div class="padding">
+  				<a class="button button-block" ng-click="createBanner()">
+  					Create banner
+  				</a>
+  				<a class="button button-block" ng-click="removeBanner()">
+  					Delete banner
+  				</a>
+  			</div>
+  		</form>
+
+  		<form>
+			<div class="list">
+				<div class="item item-divider">
+            		Interstitial
+          		</div>
+          		
+          		<div class="item item-toggle">
+			    	Auto show when ready
+     				<label class="toggle toggle-positive">
+				    	<input type="checkbox" ng-model="autoshow" />
+			    		<div class="track">
+			    			<div class="handle"></div>
+			    		</div>
+     				</label>
+  				</div>
+
+  			</div>
+  			<div class="padding">
+  				<a class="button button-block" ng-click="prepareInterstitial()">
+  					Prepare
+  				</a>
+  				<a class="button button-block" ng-click="showInterstitial()">
+  					Show
+  				</a>
+  			</div>
+  		</form>
+	</ion-content>
+</ion-view>

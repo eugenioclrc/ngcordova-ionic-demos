@@ -1,0 +1,32 @@
+<ion-view title="Demo for App Availability">
+  	<ion-content>
+  		<div class="card">
+  			<div class="item item-divider">
+	          $cordovaAppAvailability <span class="badge badge-assertive">Not working</span>
+	      	</div>  			
+  			<div class="item item-text-wrap">
+  				<p>The <a href="https://github.com/ohh2ahh/AppAvailability">AppAvailability</a> plugin allows you to check if an app is installed on the user's device. It requires an URI Scheme (e.g. twitter://) on iOS or a Package Name (e.g com.twitter.android) on Android.</p>
+  			</div>
+  		</div>
+
+  		<ion-list>
+  			<ion-item class="item item-divider">
+				Apps installed
+			</ion-item>			
+  			
+  			<ion-item>
+  				Twitter installed
+				<span class="badge" ng-class="{'badge-assertive': !hasTwitter, 'badge-stable': hasTwitter}" ng-bind="hasTwitter"></span>
+  			</ion-item>
+  			<ion-item>
+  				Facebook installed
+				<span class="badge" ng-class="{'badge-assertive': !hasFacebook, 'badge-stable': hasFacebook}" ng-bind="hasFacebook"></span>
+  			</ion-item>
+  			<ion-item>
+  				Whatsapp installed
+				<span class="badge" ng-class="{'badge-assertive': !hasWhatsapp, 'badge-stable': hasWhatsapp}" ng-bind="hasWhatsapp"></span>
+  			</ion-item>
+  			
+		</ion-list>
+  	</ion-content>
+</ion-view>
